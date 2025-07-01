@@ -51,6 +51,21 @@
       text-decoration: none;
       border-radius: 4px;
     }
+    .project {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+      margin-bottom: 2rem;
+    }
+    .project img {
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+    }
+    .project h3 {
+      margin-top: 0;
+    }
   </style>
 </head>
 <body>
@@ -83,7 +98,25 @@
 
     <section id="portfolio">
       <h2>Portfolio</h2>
-      <p>Coming soon: Projects we’ve worked on for startups and enterprise clients.</p>
+
+      <div class="project">
+        <img src="https://via.placeholder.com/800x400.png?text=Food+Delivery+MVP" alt="Food Delivery MVP" />
+        <h3>Food Delivery MVP</h3>
+        <p>A startup-focused MVP with customer ordering flow, admin panel, and driver tracking. Built with React, Firebase, and Node.js.</p>
+      </div>
+
+      <div class="project">
+        <img src="https://via.placeholder.com/800x400.png?text=Real+Estate+Platform" alt="Real Estate Platform" />
+        <h3>Real Estate Platform</h3>
+        <p>Designed and developed a property listing platform with filters, map view, and booking request feature. Built with Next.js and MongoDB.</p>
+      </div>
+
+      <div class="project">
+        <img src="https://via.placeholder.com/800x400.png?text=Healthcare+Booking+App" alt="Healthcare Booking App" />
+        <h3>Healthcare Booking App</h3>
+        <p>An appointment booking system for clinics, with doctor availability, patient registration, and SMS reminders. Powered by .NET Core and Angular.</p>
+      </div>
+
     </section>
 
     <section id="contact">
