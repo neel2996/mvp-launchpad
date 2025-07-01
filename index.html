@@ -36,19 +36,8 @@
     header {
       background: linear-gradient(to right, var(--primary), #3b82f6);
       color: white;
-      padding: 5rem 1rem 3rem 1rem;
+      padding: 5rem 1rem;
       text-align: center;
-      position: relative;
-    }
-    header .logo {
-      position: absolute;
-      top: 1rem;
-      left: 1rem;
-    }
-    header .logo img {
-      width: 50px;
-      height: 50px;
-      cursor: pointer;
     }
     nav {
       display: flex;
@@ -166,10 +155,10 @@
 <body>
   <button class="toggle-mode" onclick="toggleTheme()">🌙 Dark Mode</button>
   <header data-aos="fade-down">
-    <a href="#" class="logo"><img src="logo.png" alt="MVP Launchpad Logo"></a>
     <h1>MVP Launchpad</h1>
     <p>We build scalable MVPs for startups across the globe</p>
   </header>
+
   <nav>
     <a href="#about">About</a>
     <a href="#services">Services</a>
@@ -177,12 +166,112 @@
     <a href="#testimonials">Testimonials</a>
     <a href="#contact">Contact</a>
   </nav>
+
   <main class="container">
-    <!-- main content remains unchanged -->
+    <section id="about" data-aos="fade-up">
+      <h2>About Us</h2>
+      <p>We are a remote dev agency helping startups build and launch MVPs fast. From design to deployment, we act as your tech partner to turn your ideas into working products.</p>
+    </section>
+
+    <section id="services" data-aos="fade-up">
+      <h2>Our Services</h2>
+      <div class="services">
+        <div class="card">
+          <i class="fas fa-laptop-code"></i>
+          <h3>Web Development</h3>
+          <p>Custom-built websites and web apps using React, Next.js, .NET Core, and more.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-mobile-alt"></i>
+          <h3>Mobile Apps</h3>
+          <p>Cross-platform mobile apps built with Flutter and React Native for quick market launch.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-database"></i>
+          <h3>Backend APIs</h3>
+          <p>Scalable backend solutions with RESTful and GraphQL APIs using Node.js or .NET.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-pencil-ruler"></i>
+          <h3>UI/UX Design</h3>
+          <p>User-centered design to bring clarity, simplicity, and elegance to your digital product.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" data-aos="fade-up">
+      <h2>Our Work</h2>
+      <div class="projects">
+        <div class="card">
+          <img src="https://via.placeholder.com/800x400?text=Food+Delivery+App" alt="Food Delivery MVP" />
+          <h3>Food Delivery MVP</h3>
+          <p>Developed a lightweight delivery app with real-time tracking, user login, and admin dashboard. Tech: React, Firebase, Node.js.</p>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/800x400?text=Real+Estate+App" alt="Real Estate" />
+          <h3>Real Estate Platform</h3>
+          <p>Custom real estate platform with search filters, map view, and inquiry system. Tech: Next.js, MongoDB.</p>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/800x400?text=Healthcare+App" alt="Healthcare" />
+          <h3>Healthcare Booking App</h3>
+          <p>Clinic appointment booking app with doctor schedule management and patient SMS notifications. Tech: .NET Core, Angular.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" data-aos="fade-up">
+      <h2>What Clients Say</h2>
+      <div class="testimonials">
+        <div class="card">
+          <p>“MVP Launchpad helped us go from idea to launch in just 6 weeks. Super professional and fast.”</p>
+          <strong>– Ali R., Startup Founder</strong>
+        </div>
+        <div class="card">
+          <p>“Their frontend and backend integration was seamless. Highly recommended.”</p>
+          <strong>– Sara M., Product Manager</strong>
+        </div>
+        <div class="card">
+          <p>“They feel like part of our team, not just an outsourced vendor.”</p>
+          <strong>– Omar K., CEO</strong>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" data-aos="fade-up">
+      <div class="cta">
+        <h2>Ready to build your MVP?</h2>
+        <p>We'd love to hear your idea. Let's bring it to life — fast and professionally.</p>
+        <a href="mailto:hello@youragency.com">Get in Touch</a>
+        <form action="https://formspree.io/f/mayvpnlw" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
   </main>
+
   <footer>
-    <p>© 2025 MVP Launchpad. All rights reserved.</p>
+    &copy; 2025 MVP Launchpad. Built with 💙 by remote developers.
   </footer>
+
+  <!-- WhatsApp Chat -->
+  <script>
+    (function () {
+      var options = {
+        whatsapp: "+971501234567",
+        call_to_action: "Message us",
+        position: "right",
+      };
+      var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+      var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+      s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+      var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+    })();
+  </script>
+
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init();
