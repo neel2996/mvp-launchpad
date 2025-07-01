@@ -3,132 +3,202 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Dev Agency</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <title>MVP Launchpad</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      margin: 0;
       font-family: 'Inter', sans-serif;
-      background-color: #f8f9fa;
-      color: #212529;
+      background-color: #f4f6f9;
+      color: #333;
+      line-height: 1.6;
     }
     header {
-      background-color: #343a40;
+      background: linear-gradient(to right, #4f46e5, #3b82f6);
       color: white;
-      padding: 2rem;
+      padding: 5rem 1rem;
       text-align: center;
     }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.25rem;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background-color: #1e3a8a;
+      padding: 1rem;
+    }
     nav a {
-      margin: 0 1rem;
       color: white;
       text-decoration: none;
       font-weight: 600;
     }
     .container {
-      max-width: 960px;
+      max-width: 1200px;
       margin: 2rem auto;
-      padding: 0 1rem;
+      padding: 0 1.5rem;
     }
     section {
-      margin-bottom: 3rem;
+      margin-bottom: 4rem;
     }
     h2 {
-      color: #343a40;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #1e3a8a;
     }
-    footer {
-      background-color: #343a40;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
+    .services, .projects, .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
     }
-    .btn {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.75rem 1.5rem;
-      background-color: #007bff;
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
-    }
-    .project {
+    .card {
       background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      padding: 1rem;
-      margin-bottom: 2rem;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
     }
-    .project img {
-      width: 100%;
-      border-radius: 6px;
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card i {
+      font-size: 2rem;
+      color: #4f46e5;
       margin-bottom: 1rem;
     }
-    .project h3 {
-      margin-top: 0;
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    footer {
+      background-color: #1e3a8a;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+    }
+    .cta {
+      background: #4f46e5;
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+      border-radius: 12px;
+    }
+    .cta a {
+      background: white;
+      color: #4f46e5;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      margin-top: 1rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Your Dev Agency</h1>
-    <p>Building web and mobile apps for startups and businesses</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <h1>MVP Launchpad</h1>
+    <p>We build scalable MVPs for startups across the globe</p>
   </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
   <main class="container">
     <section id="about">
       <h2>About Us</h2>
-      <p>We are a remote-first dev agency that partners with startups and companies worldwide to build scalable and user-friendly digital products.</p>
+      <p>We are a remote dev agency helping startups build and launch MVPs fast. From design to deployment, we act as your tech partner to turn your ideas into working products.</p>
     </section>
 
     <section id="services">
       <h2>Our Services</h2>
-      <ul>
-        <li>Custom Web Development (React, Next.js, .NET Core)</li>
-        <li>Mobile App Development (Flutter, React Native)</li>
-        <li>Backend/API Development</li>
-        <li>UI/UX Design & Prototyping</li>
-      </ul>
+      <div class="services">
+        <div class="card">
+          <i class="fas fa-laptop-code"></i>
+          <h3>Web Development</h3>
+          <p>Custom-built websites and web apps using React, Next.js, .NET Core, and more.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-mobile-alt"></i>
+          <h3>Mobile Apps</h3>
+          <p>Cross-platform mobile apps built with Flutter and React Native for quick market launch.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-database"></i>
+          <h3>Backend APIs</h3>
+          <p>Scalable backend solutions with RESTful and GraphQL APIs using Node.js or .NET.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-pencil-ruler"></i>
+          <h3>UI/UX Design</h3>
+          <p>User-centered design to bring clarity, simplicity, and elegance to your digital product.</p>
+        </div>
+      </div>
     </section>
 
     <section id="portfolio">
-      <h2>Portfolio</h2>
-
-      <div class="project">
-        <img src="https://via.placeholder.com/800x400.png?text=Food+Delivery+MVP" alt="Food Delivery MVP" />
-        <h3>Food Delivery MVP</h3>
-        <p>A startup-focused MVP with customer ordering flow, admin panel, and driver tracking. Built with React, Firebase, and Node.js.</p>
+      <h2>Our Work</h2>
+      <div class="projects">
+        <div class="card">
+          <img src="https://via.placeholder.com/800x400?text=Food+Delivery+App" alt="Food Delivery MVP" />
+          <h3>Food Delivery MVP</h3>
+          <p>Developed a lightweight delivery app with real-time tracking, user login, and admin dashboard. Tech: React, Firebase, Node.js.</p>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/800x400?text=Real+Estate+App" alt="Real Estate" />
+          <h3>Real Estate Platform</h3>
+          <p>Custom real estate platform with search filters, map view, and inquiry system. Tech: Next.js, MongoDB.</p>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/800x400?text=Healthcare+App" alt="Healthcare" />
+          <h3>Healthcare Booking App</h3>
+          <p>Clinic appointment booking app with doctor schedule management and patient SMS notifications. Tech: .NET Core, Angular.</p>
+        </div>
       </div>
+    </section>
 
-      <div class="project">
-        <img src="https://via.placeholder.com/800x400.png?text=Real+Estate+Platform" alt="Real Estate Platform" />
-        <h3>Real Estate Platform</h3>
-        <p>Designed and developed a property listing platform with filters, map view, and booking request feature. Built with Next.js and MongoDB.</p>
+    <section id="testimonials">
+      <h2>What Clients Say</h2>
+      <div class="testimonials">
+        <div class="card">
+          <p>“MVP Launchpad helped us go from idea to launch in just 6 weeks. Super professional and fast.”</p>
+          <strong>– Ali R., Startup Founder</strong>
+        </div>
+        <div class="card">
+          <p>“Their frontend and backend integration was seamless. Highly recommended.”</p>
+          <strong>– Sara M., Product Manager</strong>
+        </div>
+        <div class="card">
+          <p>“They feel like part of our team, not just an outsourced vendor.”</p>
+          <strong>– Omar K., CEO</strong>
+        </div>
       </div>
-
-      <div class="project">
-        <img src="https://via.placeholder.com/800x400.png?text=Healthcare+Booking+App" alt="Healthcare Booking App" />
-        <h3>Healthcare Booking App</h3>
-        <p>An appointment booking system for clinics, with doctor availability, patient registration, and SMS reminders. Powered by .NET Core and Angular.</p>
-      </div>
-
     </section>
 
     <section id="contact">
-      <h2>Contact Us</h2>
-      <p>Email: hello@youragency.com</p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">yourprofile</a></p>
-      <a href="mailto:hello@youragency.com" class="btn">Send Us a Message</a>
+      <div class="cta">
+        <h2>Ready to build your MVP?</h2>
+        <p>We'd love to hear your idea. Let's bring it to life — fast and professionally.</p>
+        <a href="mailto:hello@youragency.com">Get in Touch</a>
+      </div>
     </section>
   </main>
 
   <footer>
-    &copy; 2025 Your Dev Agency. All rights reserved.
+    &copy; 2025 MVP Launchpad. Built with 💙 by remote developers.
   </footer>
 </body>
 </html>
