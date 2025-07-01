@@ -79,11 +79,6 @@
       margin-bottom: 1.5rem;
       color: var(--primary);
     }
-    .services, .projects, .testimonials {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-    }
     .card {
       background: var(--card-bg);
       border-radius: 12px;
@@ -93,16 +88,6 @@
     }
     .card:hover {
       transform: translateY(-5px);
-    }
-    .card i {
-      font-size: 2rem;
-      color: var(--primary);
-      margin-bottom: 1rem;
-    }
-    .card img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 1rem;
     }
     footer {
       background-color: var(--nav-bg);
@@ -201,23 +186,7 @@
 
     <section id="portfolio" data-aos="fade-up">
       <h2>Our Work</h2>
-      <div class="projects">
-        <div class="card">
-          <img src="https://via.placeholder.com/800x400?text=Food+Delivery+App" alt="Food Delivery MVP" />
-          <h3>Food Delivery MVP</h3>
-          <p>Developed a lightweight delivery app with real-time tracking, user login, and admin dashboard. Tech: React, Firebase, Node.js.</p>
-        </div>
-        <div class="card">
-          <img src="https://via.placeholder.com/800x400?text=Real+Estate+App" alt="Real Estate" />
-          <h3>Real Estate Platform</h3>
-          <p>Custom real estate platform with search filters, map view, and inquiry system. Tech: Next.js, MongoDB.</p>
-        </div>
-        <div class="card">
-          <img src="https://via.placeholder.com/800x400?text=Healthcare+App" alt="Healthcare" />
-          <h3>Healthcare Booking App</h3>
-          <p>Clinic appointment booking app with doctor schedule management and patient SMS notifications. Tech: .NET Core, Angular.</p>
-        </div>
-      </div>
+      <img src="images/our-work-preview.png" alt="Our Projects Overview" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
     </section>
 
     <section id="testimonials" data-aos="fade-up">
@@ -256,21 +225,6 @@
   <footer>
     &copy; 2025 MVP Launchpad. Built with 💙 by remote developers.
   </footer>
-
-  <!-- WhatsApp Chat -->
-  <script>
-    (function () {
-      var options = {
-        whatsapp: "+971501234567",
-        call_to_action: "Message us",
-        position: "right",
-      };
-      var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
-      var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
-      s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
-      var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
-    })();
-  </script>
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
