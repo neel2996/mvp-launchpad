@@ -6,8 +6,9 @@
   <title>MVP Launchpad</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
     body {
       font-family: 'Inter', sans-serif;
       background-color: #f4f6f9;
@@ -33,6 +34,9 @@
       gap: 2rem;
       background-color: #1e3a8a;
       padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     nav a {
       color: white;
@@ -101,10 +105,32 @@
       display: inline-block;
       margin-top: 1rem;
     }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 500px;
+      margin: 2rem auto 0;
+    }
+    input, textarea {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    button {
+      background-color: #4f46e5;
+      color: white;
+      border: none;
+      padding: 0.75rem;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
-  <header>
+  <header data-aos="fade-down">
     <h1>MVP Launchpad</h1>
     <p>We build scalable MVPs for startups across the globe</p>
   </header>
@@ -118,12 +144,12 @@
   </nav>
 
   <main class="container">
-    <section id="about">
+    <section id="about" data-aos="fade-up">
       <h2>About Us</h2>
       <p>We are a remote dev agency helping startups build and launch MVPs fast. From design to deployment, we act as your tech partner to turn your ideas into working products.</p>
     </section>
 
-    <section id="services">
+    <section id="services" data-aos="fade-up">
       <h2>Our Services</h2>
       <div class="services">
         <div class="card">
@@ -149,7 +175,7 @@
       </div>
     </section>
 
-    <section id="portfolio">
+    <section id="portfolio" data-aos="fade-up">
       <h2>Our Work</h2>
       <div class="projects">
         <div class="card">
@@ -170,7 +196,7 @@
       </div>
     </section>
 
-    <section id="testimonials">
+    <section id="testimonials" data-aos="fade-up">
       <h2>What Clients Say</h2>
       <div class="testimonials">
         <div class="card">
@@ -188,11 +214,17 @@
       </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" data-aos="fade-up">
       <div class="cta">
         <h2>Ready to build your MVP?</h2>
         <p>We'd love to hear your idea. Let's bring it to life — fast and professionally.</p>
         <a href="mailto:hello@youragency.com">Get in Touch</a>
+        <form action="https://formspree.io/f/mayvpnlw" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
       </div>
     </section>
   </main>
@@ -200,5 +232,8 @@
   <footer>
     &copy; 2025 MVP Launchpad. Built with 💙 by remote developers.
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init();</script>
 </body>
 </html>
